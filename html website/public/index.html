@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>레전드야생 서버</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="background"></div>
+
+  <header class="topbar">
+    <div class="brand">레전드야생</div>
+    <nav class="nav">
+      <a href="#home">홈</a>
+      <a href="#info">서버정보</a>
+      <a href="#apply">가입신청</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero card" id="home">
+      <div class="hero-left">
+        <p class="badge">KOREAN MINECRAFT SERVER</p>
+        <h1>레전드야생 서버</h1>
+        <p class="desc">
+          깔끔한 시스템과 안정적인 운영을 목표로 하는 한국 마인크래프트 서버입니다.
+        </p>
+
+        <div class="button-row">
+          <button class="primary-btn" onclick="copyIP()">서버 주소 복사</button>
+          <button class="secondary-btn" onclick="scrollToApply()">가입 신청하기</button>
+        </div>
+
+        <div class="server-box">
+          <div>
+            <span class="label">서버 주소</span>
+            <strong id="server-ip">play.example.com</strong>
+          </div>
+          <div>
+            <span class="label">서버 상태</span>
+            <strong id="server-status">확인 중...</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="info-grid" id="info">
+      <div class="card info-card">
+        <h2>서버 특징</h2>
+        <ul>
+          <li>깔끔한 디자인</li>
+          <li>안정적인 운영</li>
+          <li>한국 유저 중심</li>
+          <li>디스코드 연동 가능</li>
+        </ul>
+      </div>
+
+      <div class="card info-card">
+        <h2>접속 안내</h2>
+        <ul>
+          <li>버전: 1.21.x</li>
+          <li>서버 주소 복사 후 멀티플레이에서 추가</li>
+          <li>닉네임 신청 후 관리자가 확인</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card apply-section" id="apply">
+      <div class="section-title-wrap">
+        <p class="mini-title">JOIN REQUEST</p>
+        <h2>가입 신청</h2>
+        <p class="section-desc">
+          아래에 마인크래프트 닉네임을 입력하면 관리자가 확인할 수 있습니다.
+        </p>
+      </div>
+
+      <form id="apply-form" class="apply-form">
+        <label for="playerName">마인크래프트 닉네임</label>
+        <input
+          type="text"
+          id="playerName"
+          name="playerName"
+          maxlength="16"
+          placeholder="예: KR_Yuki"
+          required
+        />
+
+        <button type="submit" class="primary-btn full-btn">신청 보내기</button>
+      </form>
+
+      <p id="apply-message" class="message"></p>
+    </section>
+  </main>
+
+  <script src="/script.js"></script>
+</body>
+</html>
